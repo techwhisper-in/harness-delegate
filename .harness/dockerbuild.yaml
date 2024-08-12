@@ -1,0 +1,37 @@
+pipeline:
+  name: docker-build
+  identifier: dockerbuild
+  projectIdentifier: myfirstproject
+  orgIdentifier: default
+  tags: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: connect_to_techwhisperin
+        repoName: docker-image
+        build: <+input>
+  stages:
+    - stage:
+        name: DockerBuild
+        identifier: DockerBuild
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: true
+          platform:
+            os: Windows
+            arch: Amd64
+          runtime:
+            type: Docker
+            spec: {}
+          execution:
+            steps:
+              - step:
+                  type: BuildAndPushDockerRegistry
+                  name: BuildAndPushDockerRegistry_1
+                  identifier: BuildAndPushDockerRegistry_1
+                  spec:
+                    connectorRef: account.harnessImage
+                    repo: ankit-public
+                    tags:
+                      - harness-python-delegate-1
