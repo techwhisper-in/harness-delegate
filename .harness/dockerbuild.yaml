@@ -34,4 +34,4 @@ pipeline:
                     connectorRef: account.harnessImage
                     repo: ankit-public
                     tags:
-                      - harness-python-delegate-1
+                      - harness-python-delegate-4
