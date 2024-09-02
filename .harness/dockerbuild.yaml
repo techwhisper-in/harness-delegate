@@ -31,7 +31,7 @@ pipeline:
                   name: BuildAndPushDockerRegistry_1
                   identifier: BuildAndPushDockerRegistry_1
                   spec:
-                    connectorRef: docker
+                    connectorRef: docker-private
                     repo: ankit-private
                     tags:
                       - harness-python-delegate-v1
