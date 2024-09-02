@@ -34,4 +34,4 @@ pipeline:
                     connectorRef: docker
                     repo: ankit-private
                     tags:
-                      - harness-python-delegate-4
+                      - harness-python-delegate-v1
