@@ -18,12 +18,6 @@ pipeline:
         type: CI
         spec:
           cloneCodebase: true
-          platform:
-            os: Windows
-            arch: Amd64
-          runtime:
-            type: Docker
-            spec: {}
           execution:
             steps:
               - step:
@@ -35,3 +29,11 @@ pipeline:
                     repo: ankit-public
                     tags:
                       - harness-python-delegate-v1
+          infrastructure:
+            type: KubernetesDirect
+            spec:
+              connectorRef: test
+              namespace: k8s-harness-delegate-ng
+              automountServiceAccountToken: true
+              nodeSelector: {}
+              os: Linux
