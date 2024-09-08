@@ -28,7 +28,7 @@ pipeline:
                     connectorRef: docker
                     repo: ankit-public
                     tags:
-                      - harness-python-delegate-v1
+                      - techwhisper/ankit-public:harness-python-delegate-v1
           infrastructure:
             type: KubernetesDirect
             spec:
