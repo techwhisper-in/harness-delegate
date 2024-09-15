@@ -1,4 +1,4 @@
-FROM harness/delegate:24.07.83606
+FROM harness/delegate:24.08.83802
 USER root
 RUN microdnf update && microdnf install --nodocs unzip yum-utils
 RUN yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo && microdnf install -y terraform
