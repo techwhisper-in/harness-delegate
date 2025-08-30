@@ -59,7 +59,7 @@ spec:
       terminationGracePeriodSeconds: 3600
       restartPolicy: Always
       containers:
-      - image: techwhisper/harness-delegates:harness-python-delegate-v1
+      - image: techwhisper/harness-delegates:harness-python-delegate-v2
         imagePullPolicy: Always
         name: delegate
         securityContext:
